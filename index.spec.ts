@@ -8,7 +8,7 @@ describe('Process files', () => {
     let sync: jasmine.Spy;
     let writeFileSync: jasmine.Spy;
     let requireMock: jasmine.Spy;
-    let omitMethods = {
+    const omitMethods = {
         omit,
         omitBy,
     };
@@ -121,15 +121,15 @@ describe('Process files', () => {
         const pattern1 = 'pattern1';
         const patterns = [ pattern1 ];
         const filesPattern1 = [ 'file1' ];
-        const omit = spyOn(omitMethods, 'omit').and.callThrough();
-        const omitBy = spyOn(omitMethods, 'omitBy').and.callThrough();
+        const omitSpy = spyOn(omitMethods, 'omit').and.callThrough();
+        const omitBySpy = spyOn(omitMethods, 'omitBy').and.callThrough();
 
         sync.and.returnValue(filesPattern1);
         requireMock.and.returnValue(packageJson);
 
-        processFiles(patterns, false, requireMock, cwd, omit, omitBy, sync, writeFileSync);
+        processFiles(patterns, false, requireMock, cwd, omitSpy, omitBySpy, sync, writeFileSync);
 
-        expect(omit.calls.argsFor(0)[0]).toEqual(strippedPackageJson);
+        expect(omitSpy.calls.argsFor(0)[0]).toEqual(strippedPackageJson);
     });
 
     it('should strip out properties prefixed with underscore as well as author, rights and publishConfig', () => {

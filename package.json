@@ -13,7 +13,7 @@
     "compile": "tsc",
     "tsc:watch": "tsc --watch",
     "prepublish": "npm run compile",
-    "test": "tsc && jasmine ./dist/*spec.js"
+    "test": "npm run lint && tsc && jasmine ./dist/*spec.js"
   },
   "repository": {
     "type": "git",

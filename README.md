@@ -76,13 +76,13 @@ If you need to use it in your project but you are not working with TypeScript yo
 ## Contributing
 
 This project is maintained by a community of developers. Contributions are welcome and appreciated.
-You can find ReduxHub on GitHub; feel free to start an issue or create a pull requests:<br>
-[https://github.com/tcorral/redux-hub](https://github.com/tcorral/redux-hub)
+You can find sensitive-data-cleaner on GitHub; feel free to start an issue or create a pull requests:<br>
+[https://github.com/tcorral/sensitive-data-cleaner](https://github.com/tcorral/sensitive-data-cleaner)
 
-For more information, read the [contribution guide](https://github.com/tcorral/redux-hub/blob/master/CONTRIBUTING.md).
+For more information, read the [contribution guide](https://github.com/tcorral/sensitive-data-cleaner/blob/master/CONTRIBUTING.md).
 
 ## License
 
 Copyright (c) 2019 [Tomas Corral](http://github.com/tcorral).<br>
-Copyright (c) 2019 [ReduxHub Contributors](https://github.com/tcorral/redux-hub/graphs/contributors).<br>
+Copyright (c) 2019 [sensitive-data-cleaner Contributors](https://github.com/tcorral/sensitive-data-cleaner/graphs/contributors).<br>
 Licensed under the MIT License.

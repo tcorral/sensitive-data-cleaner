@@ -2,7 +2,6 @@ import { omit, omitBy } from 'lodash';
 import { processFiles } from './index';
 import { join } from 'path';
 
-
 describe('Process files', () => {
     let omitMock: jasmine.Spy;
     let omitByMock: jasmine.Spy;

@@ -8,8 +8,11 @@
     "clean-sensitive-data": "dist/bin.js"
   },
   "scripts": {
-    "build": "tsc && chmod +x dist/index.js",
-    "prepublish": "tsc",
+    "build": "tsc && chmod +x dist/index.js && npm run test",
+    "lint": "tslint -p .",
+    "compile": "tsc",
+    "tsc:watch": "tsc --watch",
+    "prepublish": "npm run compile",
     "test": "tsc && jasmine ./dist/*spec.js"
   },
   "repository": {
@@ -44,6 +47,7 @@
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "^3.3.1",
     "karma-jasmine-html-reporter": "^1.5.4",
+    "tslint": "^6.1.2",
     "typescript": "^3.9.5"
   },
   "dependencies": {

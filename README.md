@@ -1,9 +1,4 @@
 # sensitive-data-cleaner
-NPM package that will remove all sensitive data in package.json or package-lock.json
-
-
-
-# sensitive-data-cleaner
 
 Use this library to remove all sensitive information from your package.json on installing before publishing your app
 

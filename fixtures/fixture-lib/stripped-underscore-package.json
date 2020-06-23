@@ -1,0 +1,21 @@
+{
+    "bundleDependencies": false,
+    "dependencies": {
+      "fixture-lib-dep2": "~2.2.1",
+      "fixture-lib-dep3": "*"
+    },
+    "deprecated": false,
+    "main": "scripts/fixture-lib.js",
+    "name": "fixture-lib",
+    "typings": "assets/typings/index.d.ts",
+    "version": "2.0.0",
+    "author": "tcorral",
+    "publishConfig": {
+        "registry": "http://npm.company.dev:4873"
+    },
+    "rights": {
+        "ROLE_group_admin": "ADMIN",
+        "ROLE_group_manager": "ADMIN",
+        "ROLE_group_master page designer": "CONSUMER"
+    }
+  }

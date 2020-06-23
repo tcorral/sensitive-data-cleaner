@@ -1,0 +1,12 @@
+{
+    "bundleDependencies": false,
+    "dependencies": {
+      "fixture-lib-dep2": "~2.2.1",
+      "fixture-lib-dep3": "*"
+    },
+    "deprecated": false,
+    "main": "scripts/fixture-lib.js",
+    "name": "fixture-lib",
+    "typings": "assets/typings/index.d.ts",
+    "version": "2.0.0"
+  }

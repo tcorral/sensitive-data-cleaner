@@ -1,0 +1,45 @@
+{
+    "_from": "fixture-lib@2.0.0",
+    "_id": "fixture-lib@2.0.0",
+    "_inBundle": false,
+    "_integrity": "sha1-rKADzhExM/Ylq8moGCVvj/Zp0s8=",
+    "_location": "/fixture-lib",
+    "_phantomChildren": {},
+    "_requested": {
+      "type": "version",
+      "registry": true,
+      "raw": "fixture-lib@2.0.0",
+      "name": "fixture-lib",
+      "escapedName": "fixture-lib",
+      "rawSpec": "2.0.0",
+      "saveSpec": null,
+      "fetchSpec": "2.0.0"
+    },
+    "_requiredBy": [
+      "/",
+      "/fixture-lib-dep"
+    ],
+    "_resolved": "http://artifactory.test.com/api/npm/npm-private/fixture-lib/-/fixture-lib-2.0.0.tgz",
+    "_shasum": "aca003ce113133f625abc9a818256f8ff669d2cf",
+    "_spec": "fixture-lib@2.0.0",
+    "_where": "/home/jenkins/agent/workspace/project/repo/master/dist/libs/package",
+    "bundleDependencies": false,
+    "dependencies": {
+      "fixture-lib-dep2": "~2.2.1",
+      "fixture-lib-dep3": "*"
+    },
+    "deprecated": false,
+    "main": "scripts/fixture-lib.js",
+    "name": "fixture-lib",
+    "typings": "assets/typings/index.d.ts",
+    "version": "2.0.0",
+    "author": "tcorral",
+    "publishConfig": {
+        "registry": "http://npm.company.dev:4873"
+    },
+    "rights": {
+        "ROLE_group_admin": "ADMIN",
+        "ROLE_group_manager": "ADMIN",
+        "ROLE_group_master page designer": "CONSUMER"
+    }
+  }

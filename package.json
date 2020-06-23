@@ -1,0 +1,54 @@
+{
+  "name": "sensitive-data-cleaner",
+  "version": "1.0.1",
+  "description": "NPM package that removes all sensitive data in package.json or package-lock.json",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "clean-sensitive-data": "dist/bin.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "prepublish": "tsc",
+    "test": "tsc && jasmine ./dist/*spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcorral/sensitive-data-cleaner.git"
+  },
+  "keywords": [
+    "strip",
+    "sensitive",
+    "security",
+    "cleaner"
+  ],
+  "author": "Tomas Corral",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcorral/sensitive-data-cleaner/issues"
+  },
+  "homepage": "https://github.com/tcorral/sensitive-data-cleaner#readme",
+  "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
+    "@types/glob": "^7.1.2",
+    "@types/jasmine": "^3.5.11",
+    "@types/jasmine-ajax": "^3.3.1",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/lodash": "^4.14.156",
+    "@types/node": "^14.0.13",
+    "jasmine": "^3.5.0",
+    "jasmine-core": "^3.5.0",
+    "jasmine-spec-reporter": "^5.0.2",
+    "karma": "^5.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage-istanbul-reporter": "^3.0.3",
+    "karma-jasmine": "^3.3.1",
+    "karma-jasmine-html-reporter": "^1.5.4",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.15"
+  }
+}

@@ -40,26 +40,33 @@ export const processFiles = (patterns: string[], verbose: boolean, require: (id:
         if (verbose) {
             console.log(`Loading file ${path} - ${index + 1} of ${filesFoundLength}`);
         }
-        const pkgJson = require(path);
-        if (verbose) {
-            console.log('Original content', pkgJson);
+        try {
+            const pkgJson = require(path);
+            if (verbose) {
+                console.log('Original content', pkgJson);
+            }
+            const noUnderscorePropertiesJson = omitBy(pkgJson, (value: string, key: string) => key.startsWith('_'));
+            if (verbose) {
+                console.log('No underscore properties object:', noUnderscorePropertiesJson);
+            }
+            const toStripPkgJson = omit(noUnderscorePropertiesJson, ['author', 'publishConfig', 'rights']);
+            if (verbose) {
+                console.log('Stripped object:', toStripPkgJson);
+            }
+            const newContent = JSON.stringify(toStripPkgJson, undefined, '    ');
+            if (verbose) {
+                console.log('Stripping underscore prefixed properties from package.json');
+            }
+            writeFileSync(path, newContent, { encoding: 'utf8'});
+            if (verbose) {
+                console.log(`File ${path} is ready`);
+            }
+        } catch (er) {
+            if (verbose) {
+                console.error(`${filepath} cannot be found or file has parsing issues.`);
+            }
         }
-        const noUnderscorePropertiesJson = omitBy(pkgJson, (value: string, key: string) => key.startsWith('_'));
-        if (verbose) {
-            console.log('No underscore properties object:', noUnderscorePropertiesJson);
-        }
-        const toStripPkgJson = omit(noUnderscorePropertiesJson, ['author', 'publishConfig', 'rights']);
-        if (verbose) {
-            console.log('Stripped object:', toStripPkgJson);
-        }
-        const newContent = JSON.stringify(toStripPkgJson, undefined, '    ');
-        if (verbose) {
-            console.log('Stripping underscore prefixed properties from package.json');
-        }
-        writeFileSync(path, newContent, { encoding: 'utf8'});
-        if (verbose) {
-            console.log(`File ${path} is ready`);
-        }
+
     });
 
     if (verbose) {

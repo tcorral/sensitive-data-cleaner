@@ -151,4 +151,22 @@ describe('Process files', () => {
 
         expect(stringify.calls.argsFor(0)[0]).toEqual(completelyStrippedPackageJson);
     });
+
+    it('should gracelly fail when file cannot be found or if it cannot be parsed: verbose set to true', () => {
+        const cwd = '';
+        const errorMessage = 'SyntaxError: path/package.json: Unexpected token < in JSON at position 2688';
+        const expectedErrorMessage = 'file1 cannot be found or file has parsing issues.';
+
+        const pattern1 = 'pattern1';
+        const patterns = [ pattern1 ];
+        const filesPattern1 = [ 'file1' ];
+        const errorLogger = spyOn(console, 'error');
+
+        sync.and.returnValue(filesPattern1);
+        requireMock.and.throwError(errorMessage);
+
+        processFiles(patterns, true, requireMock, cwd, omit, omitBy, sync, writeFileSync);
+
+        expect(errorLogger).toHaveBeenCalledWith(expectedErrorMessage)
+    })
 });

@@ -1,6 +1,6 @@
 {
   "name": "sensitive-data-cleaner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NPM package that removes all sensitive data in package.json or package-lock.json",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
